@@ -1,0 +1,70 @@
+.body {
+   
+   
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; /* Меняем на строку */
+    flex-wrap: wrap;     /* Позволяем перенос на новую строку */
+    justify-content: center;
+    gap: 20px;
+   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 15%;
+    width: 100%;
+    min-height:85vh;
+    /* Задний фон как в основном body проекта */
+  background: linear-gradient(to right,#472B83,#4512AE,#7546D7);
+    background-attachment: fixed;
+}
+
+/* Стили сообщения об отсутствии заказов */
+.empty {
+    width: 100%; /* Чтобы сообщение занимало всю ширину */
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2rem;
+    color: #888;
+    background: rgba(249, 249, 249, 0.9); /* Полупрозрачный фон */
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px dashed #e0e0e0;
+}
+
+/* Стили для ошибок */
+.error {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff5f5;
+    color: #c53030;
+    border-radius: 8px;
+    border: 1px solid #feb2b2;
+    font-weight: 600;
+     width: 100%;
+    min-height:85vh;
+}
+
+/* Анимация загрузки */
+.loader {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 1.1rem;
+    color: #8009bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.loader::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #8009bb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+ 

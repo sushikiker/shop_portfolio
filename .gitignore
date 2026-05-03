@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# FastAPI / Alembic
+alembic/versions/*.pyc
+
+# Node / React
+node_modules/
+build/
+.pnp
+.pnp.js
+
+# Docker
+.docker/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

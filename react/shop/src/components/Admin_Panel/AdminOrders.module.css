@@ -1,0 +1,93 @@
+.adminContainer {
+  padding: 20px;
+  background: #f9f9fb;
+  min-height: 100vh;
+}
+
+.orderTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+.orderTable th, .orderTable td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.orderTable th {
+  background-color: #f4f4f7;
+  color: #555;
+  font-weight: 600;
+}
+
+.statusSelect {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.deleteBtn:hover {
+  background: #d9363e;
+}
+
+/* Расцветка для статусов (опционально) */
+.statusSelect[value="delivered"] { color: green; border-color: green; }
+.statusSelect[value="cancelled"] { color: red; border-color: red; }
+.tableWrapper {
+  overflow-x: auto; /* На случай, если полей станет слишком много */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.price {
+  font-weight: 700;
+  color: #2c3e50;
+  white-space: nowrap;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.count {
+  background: #8009bb;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Цветовая индикация статусов в селекте */
+.statusSelect.pending { border-left: 4px solid #ffa500; }
+.statusSelect.delivered { border-left: 4px solid #2ecc71; }
+.statusSelect.cancelled { border-left: 4px solid #e74c3c; }
+.statusSelect.shipped { border-left: 4px solid #3498db; }
+
+.loader {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: #666;
+}

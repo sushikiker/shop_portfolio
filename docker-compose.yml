@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    networks:
+      shop_net:
+        ipv4_address: 172.20.0.10
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Xdxdsi7h
+      POSTGRES_DB: shop
+
+  backend:
+    build: ./fastapi
+    # --- ВОТ ЭТОГО НЕ ХВАТАЛО ---
+    ports:
+      - "8000:8000" 
+    # ---------------------------
+    depends_on:
+      - db
+    networks:
+      shop_net:
+        ipv4_address: 172.20.0.20
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:Xdxdsi7h@172.20.0.10:5432/shop
+      # Добавь остальные ENV переменные (SECRET_KEY и т.д.), если они не в Dockerfile
+
+  frontend:
+    build: ./react/shop
+    ports:
+      - "80:80"
+    networks:
+      shop_net:
+        ipv4_address: 172.20.0.30
+
+networks:
+  shop_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

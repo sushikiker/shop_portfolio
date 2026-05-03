@@ -1,0 +1,10 @@
+.body{
+    width: 90%;
+    min-height:85vh;
+    background: linear-gradient(to right,#472B83,#4512AE,#7546D7);
+    padding-bottom: 10%;
+    display: flex;
+    flex-wrap: wrap;      /* перенос строк */
+    align-content: flex-start;
+   
+}

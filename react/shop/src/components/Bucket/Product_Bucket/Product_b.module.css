@@ -1,0 +1,190 @@
+/* Основной контейнер карточки заказа в корзине */
+.product {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+    font-family: sans-serif;
+}
+
+.product:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Верхняя часть: Номер заказа и Статус */
+.orderHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 12px;
+}
+
+.orderId {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #8009bb; /* Твой фирменный фиолетовый */
+}
+
+/* Стилизация статусов */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.paid {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.shipped {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+/* Блок информации о заказе */
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.info div {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.price {
+    grid-column: span 2;
+    font-size: 1.2rem !important;
+    font-weight: 700;
+    color: #222;
+    margin-top: 5px;
+}
+
+.address {
+    grid-column: span 2;
+    color: #666 !important;
+    font-size: 0.85rem !important;
+    background: #f9f9f9;
+    padding: 8px;
+    border-radius: 6px;
+    border-left: 3px solid #8009bb;
+}
+
+.date {
+    grid-column: span 2;
+    font-size: 0.8rem !important;
+    color: #999 !important;
+    text-align: right;
+}
+
+/* Кнопки действий в корзине */
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.detailsBtn, .payBtn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.detailsBtn {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.payBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+.detailsBtn:hover, .payBtn:hover {
+    opacity: 0.9;
+}
+
+.payBtn:active {
+    transform: scale(0.98);
+}
+/* Базовый стиль статуса */
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Специфические цвета */
+.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.confirmed {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.shipped {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.delivered {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Дополнительная кнопка отмены в экшенах */
+.cancelActionBtn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #dc3545;
+    background: transparent;
+    color: #dc3545;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.cancelActionBtn:hover {
+    background: #dc3545;
+    color: white;
+}
+.productImage {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #fcfcfc;
+}
